@@ -2,7 +2,7 @@ import PageNotFoundImage from '../assets/Position.gif'
 import { Link } from 'react-router-dom'
 import { useTitle } from '../hooks'
 const PageNotFound = ({title}) => {
-  const pageTitle = useTitle(title)
+  useTitle(title)
   return (
     <section className="flex flex-col justify-center px-2">
       <div className="flex flex-col items-center my-4" >

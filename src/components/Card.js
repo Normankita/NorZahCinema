@@ -2,9 +2,9 @@
 import { Link } from "react-router-dom"
 import Sample from '../assets/logo.png'
 const Card = ({movie}) => {
-    const { original_title, id, overview, poster_path, backdrop_path }=movie
+    const { original_title, id, overview, poster_path }=movie
 
-    const disp= poster_path? `https://image.tmdb.org/t/p/w500/${backdrop_path}`: Sample;
+    const disp= poster_path? `https://image.tmdb.org/t/p/w500/${poster_path}`: Sample;
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-3">
                 <Link to={`/movie/${id}`}>

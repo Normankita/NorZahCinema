@@ -25,3 +25,18 @@ fetch(url, options)
   .then(res => res.json())
   .then(json => console.log(json))
   .catch(err => console.error('error:' + err));
+
+
+
+
+
+
+  OPtions 
+
+    const options = useMemo(() => ({
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${process.env.REACT_APP_token}`
+    }
+  }), []);

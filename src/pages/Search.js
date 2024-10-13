@@ -10,7 +10,7 @@ const Search = ({pathToApi}) => {
   const [loading, setLoading]= useState(false)
   console.log("fetching...")
   const {norm: movies} = useFetchPaje(pathToApi, loading, setLoading, looking)
-  const pageTitle= useTitle(`Results For ${searchTerm}`)
+  useTitle(`Results For ${searchTerm}`)
   return (
     <main>
       <section className="py-7 mx-auto max-w-7xl">
