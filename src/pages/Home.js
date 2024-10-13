@@ -4,7 +4,7 @@ import { useState } from "react";
 const Home = ({pathToApi, title}) => {
   const pageTitle= useTitle(title)
   const [loading, setLoading]= useState(false)
-  console.log("fetching...")
+  console.log("fetching Movie Data...")
   const {norm: movies} = useFetchPaje(pathToApi, loading, setLoading)
   return (
     <main>
