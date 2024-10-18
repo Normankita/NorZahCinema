@@ -42,7 +42,8 @@ const [butdown, setButdown]=useState({url:"", download:false})
    }
 
   return (
-    <section className="flex justify-around flex-wrap py-10">
+    <main>
+          <section className="flex justify-around flex-wrap py-10">
       <div className="max-w-sm">
         <img className="rounded-lg" src={disp} alt={pan.title} />
       </div>
@@ -122,6 +123,7 @@ const [butdown, setButdown]=useState({url:"", download:false})
         </a>       
       </div>
     </section>
+    </main>
   );
 };
 
