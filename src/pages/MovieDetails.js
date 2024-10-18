@@ -2,6 +2,7 @@ import { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import Sample from '../assets/logo.png';
 import { useTitle } from "../hooks";
+import { Mybutton } from '../components'
 
 const MovieDetails = () => {
   const [pan, setPan] = useState({});
@@ -12,6 +13,8 @@ const MovieDetails = () => {
 
   // Memoizing options to prevent unnecessary re-renders
  // Empty array means this memoization will only run once when the component mounts
+const [butdown, setButdown]=useState({url:"", download:false})
+ 
 
   useEffect(() => {
     async function fetchDetails() {
@@ -29,6 +32,14 @@ const MovieDetails = () => {
 
   // Setting the page title using the custom hook
   useTitle(pan.title);
+
+  const handleDownload = ()=>{
+    console.log(pan)
+    const name = pan.title.replaceAll(" ", "-");
+    const year = pan.release_date.substring(0,4)
+  
+    setButdown({url:`https://nkiri.com/${name}-${year}-download-hollywood-movie/`, download:true})
+   }
 
   return (
     <section className="flex justify-around flex-wrap py-10">
@@ -99,8 +110,16 @@ const MovieDetails = () => {
             <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
               IMDB
             </span>
-          </button>
+            </button>
         </a>
+        <a href={butdown.url} target="_blank" rel="noreferrer" >
+        <Mybutton handleDownload = {handleDownload}>
+          
+        <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                  { butdown.download? "Download":"Try Downloading" }
+                  </span>
+        </Mybutton>
+        </a>       
       </div>
     </section>
   );

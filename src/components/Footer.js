@@ -17,7 +17,8 @@
                                 <a href="www.linkedin.com/in/norman-kita-aa6499207" target="_blank" className="hover:underline me-4 md:me-6" rel="noreferrer">LinkedIn</a>
                             </li>
                             <li>
-                                <a href="https://github.com/Normankita" target="_blank" className="hover:underline me-4 md:me-6" rel="noreferrer">GitHub</a>
+                                <a href="https://github.com/Normankita" target="_blank" className="hover:underline me-4 md:me-6" rel="noreferrer">
+                                <span className="">GitHub</span></a>
                             </li>
                             <li>
                                 <a href="https://wa.me/+255762028554" target="_blank" className="hover:underline" rel="noreferrer">WhatsApp</a>

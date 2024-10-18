@@ -22,7 +22,7 @@ const Home = ({pathToApi, title}) => {
         </div>
       </section>
     </main>
-  )
+  ) 
 }
 
 export default Home

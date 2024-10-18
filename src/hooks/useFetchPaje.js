@@ -4,6 +4,7 @@ export const useFetchPaje = (pathToApi, loading, setLoading, looking = "") => {
   const [norm, setNorm] = useState([]);
 
   // Constructing the URL for fetching movie data
+ 
   const url = `https://api.themoviedb.org/3/${pathToApi}${looking}api_key=${process.env.REACT_APP_KEY}&language=en-US&page=1`;
 
   // Memoizing options to prevent re-creation on every render
