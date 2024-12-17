@@ -21,7 +21,7 @@
                                 <span className="">GitHub</span></a>
                             </li>
                             <li>
-                                <a href="https://wa.me/+255762028554" target="_blank" className="hover:underline" rel="noreferrer">WhatsApp</a>
+                                <a href="https://wa.me/+255621381584" target="_blank" className="hover:underline" rel="noreferrer">WhatsApp</a>
                             </li>
                         </ul>
                     </div>
